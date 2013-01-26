@@ -22,25 +22,25 @@ class Time
     if @minute + total_mins < 60
       @minute += total_mins
     else
-      hrs_to_add = total_mins/60
+      @hrs_to_add = total_mins/60
       @minute += total_mins % 60
       handle_excess_minutes if @minute >= 60
-      if @hour + hrs_to_add < 24
-        @hour += hrs_to_add
+      if @hour + @hrs_to_add < 24
+        @hour += @hrs_to_add
       else
-        more_than_24_hrs
+        more_than_24
       end
     end
   end
 
   def handle_excess_minutes
     @minute = @minute % 60
-    hrs_to_add += 1
+    @hrs_to_add += 1
   end
 
-  def more_than_24_hours
-    hrs_to_add = hrs_to_add % 24
-    hr_total = @hour + hrs_to_add
+  def more_than_24
+    @hrs_to_add = @hrs_to_add % 24
+    hr_total = @hour + @hrs_to_add
     if hr_total < 24
       @hour = hr_total
     elsif hr_total == 24
