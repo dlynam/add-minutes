@@ -1,3 +1,0 @@
-require File.dirname(__FILE__) + '/lib/add-minutes'
-
-Time.AddMinutes("9:13 AM", 10)
