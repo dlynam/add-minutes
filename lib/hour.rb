@@ -1,9 +1,8 @@
-class Hour < Time
+class Hour 
 
   attr_accessor :val, :part_of_day
 
   def initialize(hour, part_of_day)
-    @conversion = 24
     @val = hour
     @part_of_day = part_of_day
     convert_to_army_time

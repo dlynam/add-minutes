@@ -1,9 +1,8 @@
-class Minute < Time
+class Minute 
 
   attr_accessor :val
 
   def initialize(minute)
-    @conversion = 60
     @val = minute
   end
 
