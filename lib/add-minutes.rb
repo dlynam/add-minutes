@@ -1,5 +1,4 @@
 class Time
-  attr_accessor :minute, :hour
 
   def initialize(input_time)
     input_time_array = input_time.split(" ")
@@ -18,12 +17,12 @@ class Time
     t.to_s
   end
 
-  def add_time_in_minutes(total_mins)
-    if @minute + total_mins < 60
-      @minute += total_mins
+  def add_time_in_minutes(mins)
+    if @minute + mins < 60
+      @minute += mins
     else
-      @hrs_to_add = total_mins/60
-      @minute += total_mins % 60
+      @hrs_to_add = mins/60
+      @minute += mins % 60
       handle_excess_minutes if @minute >= 60
       if @hour + @hrs_to_add < 24
         @hour += @hrs_to_add
