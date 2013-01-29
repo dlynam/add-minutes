@@ -2,6 +2,8 @@
 *.rbc
 *.rb~
 *.md~
+*.swp
+*.swo
 .bundle
 .config
 coverage

@@ -1,4 +1,4 @@
-class Time
+class MyTime
 
   attr_accessor :hour, :minute
 
@@ -9,7 +9,7 @@ class Time
   end
 
   def self.add_minutes(input_time, mins_to_add)
-    t = Time.new(input_time)
+    t = MyTime.new(input_time)
     t.minute.add(mins_to_add, t.hour)
     t.to_s
   end

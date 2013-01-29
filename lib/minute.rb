@@ -23,7 +23,7 @@ class Minute
   end
 
   def to_s
-    val < 10 ? "0#{val}" : val
+    val < 10 ? "0#{val}" : val.to_s
   end
 
 end
