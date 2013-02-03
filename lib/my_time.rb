@@ -11,11 +11,11 @@ class MyTime
   def self.add_minutes(input_time, mins_to_add)
     t = MyTime.new(input_time)
     t.minute.add(mins_to_add, t.hour)
-    t.to_s
+    puts t.to_s
   end
 
   def to_s
-    puts "#{hour.output_val}:#{minute.to_s} #{hour.output_part_of_day}"
+    "#{hour.output_val}:#{minute.to_s} #{hour.output_part_of_day}"
   end
 
   def parse(input_str)
